@@ -1,0 +1,12 @@
+.homeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 350px) {
+    .homeContainer {
+      justify-content: unset;
+      flex-direction: column;
+    }
+  }
