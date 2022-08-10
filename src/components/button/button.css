@@ -1,0 +1,10 @@
+button {
+    display: flex;
+    padding: 0.2rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(130, 230, 227);
+    transform: scale(1.4);
+    border-image: initial;
+    border-top-color: buttonborder;
+    border-radius: 10px;
+}

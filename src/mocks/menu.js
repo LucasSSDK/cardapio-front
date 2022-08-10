@@ -1,4 +1,4 @@
-export const menu = [
+export const modal = [
     {
         name:"Presunto Ibérico e Presunto Serrano",
         description: "Popular como tapa e como entrada, o Presunto Ibérico é um presunto cru espanhol vermelho escuro de porcos ibéricos especiais e é considerado um dos melhores do mundo. Além do presunto ibérico, o presunto serrano também é consumido em toda a Espanha.",
