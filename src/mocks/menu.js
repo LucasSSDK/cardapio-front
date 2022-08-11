@@ -12,7 +12,7 @@ export const modal = [
 
     },
     {
-        name:"Lula",
+        name:"Calamar",
         description: "Calamar é a palavra espanhola para lula e o prato de lula, portanto, consiste em anéis de lula fritos em uma massa ou revestimento de farinha de rosca. O prato geralmente é servido como tapa, muitas vezes com fatias de limão e aioli ao lado.",
         url: "https://www.takeaway.com/foodwiki/uploads/sites/11/2019/08/calamares_2-1080x961.jpg"
 
