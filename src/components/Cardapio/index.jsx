@@ -3,8 +3,12 @@ import './Cardapio.css';
 import { modal } from '../../mocks/menu';
 import Botao from 'components/button/index';
 
-export default function Cardapio() {
+import PratoDetalhesModal from 'components/PratoDetalhesModal/PratoDetalhes';
+
+export default function Cardapio({ clickItem}) {
   const [pratoSelecionada, setpratoSelecionada] = useState({});
+
+  const [pratoModal, setPratoModal] = useState(false)
 
   const adicionarItem = (pratoIndex) => {
     const prato = {
@@ -22,14 +26,15 @@ export default function Cardapio() {
 	Boolean(canRender) && <span className='item__badge'>{pratoSelecionada[index] || 0} </span>;
 
   const removeButton = (canRender, index) =>
-	Boolean(canRender) && (<button className="Acoes__remover" onClick={() => removerItem(index)}>remover</button>)
+	Boolean(canRender) && (<button className="Acoes__remover" onClick={(e) => {e.stopPropagation();removerItem(index);}}>remover</button>)
 
 
   return (
     <div className="cardapioConteiner">
       <>
+      
         {modal.map((item, index) => (
-          <div className="cardapioItem" key={`cardapioItem-${index}`}>
+          <div className="cardapioItem" key={`cardapioItem-${index}`} onClick={() => clickItem(item.id)}>
 
               {badgeCounter(pratoSelecionada[index], index)}
             <div className="cardapioName">
@@ -38,8 +43,8 @@ export default function Cardapio() {
                 <img src={item.url} alt={item.name} />
                 {/* <div className="cardapioDescription">{item.description}</div> */}
                 <div>
-                  <button className="adicionar" onClick={() => adicionarItem
-                    (index)}>Adicionar </button>
+                  <button className="adicionar" onClick={(e) => {e.stopPropagation(); adicionarItem
+                    (index);}}>Adicionar </button>
 
                       {removeButton(pratoSelecionada[index], index)}
 
@@ -50,7 +55,8 @@ export default function Cardapio() {
             </div>
           </div>
         ))}
-      </>
+      </> 
+      {pratoModal && <PratoDetalhesModal prato = {pratoModal} closeModal= {()=> setPratoModal(false)} />}
     </div>
   );
 }

@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
       <div className="homeConteiner">
-        <Cardapio />|
+        <Cardapio clickItem={(pratoId) => setPratoModal(prato)} />|
         <Botao />
       </div>
     </div>

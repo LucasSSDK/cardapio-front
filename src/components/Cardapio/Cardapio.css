@@ -12,8 +12,12 @@
     width: 300px;
     background-color: rgb(241, 169, 213);
     padding: 1rem;
-    
+    font-size: 1.5em;
+  font-weight: 700;
+  line-height: 100%;
 }
+    
+
 .cardapioName {
     color: rgb(169, 37, 37);
     font-size: 1.5rem;
@@ -67,4 +71,8 @@ img {
     border-radius: 10%;
     top: -9px;
     left: -9px;
+  }
+  .Acoes__remover {
+    background-color: rgb(226, 43, 43);
+    color: #fff;
   }
