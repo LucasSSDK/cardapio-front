@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Cardapio.css';
-// import { modal } from '../../mocks/menu';
-import Botao from 'components/button/index';
 
 import { ItemService } from '../../Services/PratoService';
 
@@ -88,7 +86,10 @@ export default function Cardapio({ clickItem }) {
 
                   {removeButton(pratoSelecionada[index], index)}
 
-                  <button className="botaoModal" onClick={() => getById(item.id)}>
+                  <button
+                    className="botaoModal"
+                    onClick={() => getById(item.id)}
+                  >
                     Conheça este prato
                   </button>
                 </div>

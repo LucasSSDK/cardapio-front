@@ -1,6 +1,6 @@
 import './Home.css';
 import Cardapio from '../Cardapio/index.jsx';
-import Botao from 'components/button/index';
+import Botao from '../Create/index';
 import sacola from '../../assets/icons/sacola.svg';
 import logo from '../../assets/logo.jpg';
 
@@ -27,7 +27,6 @@ export default function Home() {
       </div>
       <div className="homeConteiner">
         <Cardapio clickItem={(pratoId) => setPratoModal(prato)} />|
-        <Botao />
       </div>
     </div>
   );

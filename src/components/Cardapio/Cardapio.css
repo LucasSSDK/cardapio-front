@@ -1,7 +1,9 @@
 .cardapioConteiner {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
 }
 
 .cardapioItem {
@@ -21,6 +23,7 @@
 .cardapioName {
     color: rgb(169, 37, 37);
     font-size: 1.5rem;
+    display: flex
 }
 
 .cardapioDescription {
@@ -76,3 +79,22 @@ img {
     background-color: rgb(226, 43, 43);
     color: #fff;
   }
+  button {
+    display: flex;
+    padding: 0.2rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(130, 230, 227);
+    border-image: initial;
+    border-top-color: buttonborder;
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #3359ec;
+    transition: 0.5s;
+    
+}
+button:hover {
+    transform: scale(1.2);
+    color: aquamarine;
+
+}

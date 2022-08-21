@@ -1,4 +1,4 @@
-import './Modal.css'
+import './Modal.css';
 import Overlay from 'components/Overlay/Overlay';
 
 function Modal({ children, closeModal }) {
