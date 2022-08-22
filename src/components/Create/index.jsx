@@ -67,9 +67,7 @@ export default function Create({ createPrato, closeModal }) {
         </div>
       </Modal>
       <div className="Header__opcoes Opcoes">
-        <button className="botao" type="submit">
-          Add Novo Prato
-        </button>
+        
       </div>
     </>
   );

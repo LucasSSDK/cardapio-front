@@ -8,8 +8,8 @@ function PratoDetalhesModal({ prato, closeModal }) {
         <div className="PratoDetalhesModal__name">{prato.name}</div>
         <div className="PratoDetalhesModal__descricao">
           {' '}
-          <b>Descrição</b>
-          {prato.descricao}
+          <b>Descrição: </b>
+          {prato.description}
         </div>
       </div>
 

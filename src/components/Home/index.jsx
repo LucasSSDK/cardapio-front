@@ -31,11 +31,17 @@ export default function Home() {
         </div>
       </div>
       <div className="homeConteiner">
-        <Cardapio clickItem={(pratoId) => setPratoModal(prato)} />
+        <Cardapio />
+        {/* clickItem ={(prato) => setPratoModal(prato)} */}
+        
         {
-          canShowCreatePrato && (<Cardapio closeModal={()=> setCanShowCreatePrato(false)} />)
+          
+          canShowCreatePrato && (<Cardapio clickItem = { setCanShowCreatePrato(true)} />)
+          
         }
-        <Create createPrato={() => setCanShowCreatePrato[(true)]}/>
+        <Create 
+        createPrato={() => setCanShowCreatePrato(false)}
+        />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { ItemService } from '../../Services/PratoService';
 import PratoDetalhesModal from 'components/PratoDetalhesModal/PratoDetalhes';
 import { useEffect } from 'react';
 
-export default function Cardapio({ clickItem }) {
+export default function Cardapio({ }) {
   const [prato, setPratos] = useState([]);
   const [pratoSelecionada, setpratoSelecionada] = useState({});
 
@@ -65,7 +65,7 @@ export default function Cardapio({ clickItem }) {
           <div
             className="cardapioItem"
             key={`cardapioItem-${index}`}
-            onClick={() => clickItem(item.id)}
+            // onClick={() => clickItem(item.id)}
           >
             {badgeCounter(pratoSelecionada[index], index)}
             <div className="cardapioName">
