@@ -1,10 +1,15 @@
 import './Home.css';
+import { useState } from 'react';
 import Cardapio from '../Cardapio/index.jsx';
-import Botao from '../Create/index';
 import sacola from '../../assets/icons/sacola.svg';
 import logo from '../../assets/logo.jpg';
+import Create from '../Create/index';
+import PratoDetalhesModal from 'components/PratoDetalhesModal/PratoDetalhes';
 
 export default function Home() {
+
+  const [canShowCreatePrato, setCanShowCreatePrato] = useState(false);
+  
   return (
     <div className="Home">
       <div className="Home__header Header">
@@ -26,7 +31,11 @@ export default function Home() {
         </div>
       </div>
       <div className="homeConteiner">
-        <Cardapio clickItem ={(pratoId) => setPratoModal(prato)} />
+        <Cardapio clickItem={(pratoId) => setPratoModal(prato)} />
+        {
+          canShowCreatePrato && (<Cardapio closeModal={()=> setCanShowCreatePrato(false)} />)
+        }
+        <Create createPrato={() => setCanShowCreatePrato[(true)]}/>
       </div>
     </div>
   );
