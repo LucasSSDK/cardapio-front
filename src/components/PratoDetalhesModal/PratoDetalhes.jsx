@@ -1,4 +1,4 @@
-import './PratoDetalhes.css';
+
 import Modal from 'components/Modal/Modal';
 
 function PratoDetalhesModal({ prato, closeModal }) {

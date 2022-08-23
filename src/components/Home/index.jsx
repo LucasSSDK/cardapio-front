@@ -4,7 +4,7 @@ import Cardapio from '../Cardapio/index.jsx';
 import sacola from '../../assets/icons/sacola.svg';
 import logo from '../../assets/logo.jpg';
 import Create from '../Create/index';
-import PratoDetalhesModal from 'components/PratoDetalhesModal/PratoDetalhes';
+
 
 export default function Home() {
 
@@ -32,15 +32,13 @@ export default function Home() {
       </div>
       <div className="homeConteiner">
         <Cardapio />
-        {/* clickItem ={(prato) => setPratoModal(prato)} */}
-        
         {
           
-          canShowCreatePrato && (<Cardapio clickItem = { setCanShowCreatePrato(true)} />)
+          canShowCreatePrato && (<Create closeModal={() => setCanShowCreatePrato(false)} />)
+          // clickItem = { setCanShowCreatePrato(true)}
           
         }
-        <Create 
-        createPrato={() => setCanShowCreatePrato(false)}
+        <Create createPrato = {() => setCanShowCreatePrato(true)}
         />
       </div>
     </div>

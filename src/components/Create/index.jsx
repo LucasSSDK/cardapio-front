@@ -4,9 +4,9 @@ import Modal from '../Modal/Modal';
 
 export default function Create({ createPrato, closeModal }) {
   const form = {
-    nome: '',
+    name: '',
     descricao: '',
-    imagem: '',
+    image: '',
   };
 
   const [state, setState] = useState(form);
@@ -39,13 +39,13 @@ export default function Create({ createPrato, closeModal }) {
                 id="descricao"
                 type="text"
                 placeholder="Ex: Lasanha é um tipo de massa..."
-                value={state.descricao}
+                value={state.description}
                 onChange={(e) => handleChange(e, 'descricao')}
               />
             </div>
             <div>
               <label className="AdicionarPratoModal__imagem" htmlFor="imagem">
-                {!state.imagem.length ? 'Adicione uma imagem' : state.imagem}
+                {!state.image.length ? 'Adicione uma imagem' : ""}
               </label>
               <input
                 id="imagem"
@@ -67,7 +67,7 @@ export default function Create({ createPrato, closeModal }) {
         </div>
       </Modal>
       <div className="Header__opcoes Opcoes">
-        
+        <button type='button' className='create__prato' onClick={() => createPrato()}>Adicionar um novo prato</button>
       </div>
     </>
   );
