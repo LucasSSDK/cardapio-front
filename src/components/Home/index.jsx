@@ -30,7 +30,7 @@ export default function Home() {
           <button
           type="button"
           className="create__prato"
-          onClick={() => createPrato()}
+          onClick={() => createPrato(true)}
         >
           Adicionar um novo prato
         </button>
