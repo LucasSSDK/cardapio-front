@@ -6,7 +6,7 @@ import { ItemService } from '../../Services/PratoService';
 import PratoDetalhesModal from 'components/PratoDetalhesModal/PratoDetalhes';
 import { useEffect } from 'react';
 
-export default function Cardapio({}) {
+export default function Cardapio() {
   const [prato, setPratos] = useState([]);
   const [pratoSelecionada, setpratoSelecionada] = useState({});
 

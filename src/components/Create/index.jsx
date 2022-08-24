@@ -45,7 +45,7 @@ export default function Create({ createPrato, closeModal }) {
             </div>
             <div>
               <label className="AdicionarPratoModal__imagem" htmlFor="imagem">
-                {!state.image.length ? 'Adicione uma imagem' : ""}
+                {!state.image.length ? 'Adicione uma imagem' : ''}
               </label>
               <input
                 id="imagem"
@@ -57,17 +57,13 @@ export default function Create({ createPrato, closeModal }) {
               />
             </div>
             <div>
-              <input
-                className="AdicionarPratoModal__enviar"
-                type="submit"
-                value={'Enviar'}
-              />
+              <button className="AdicionarPratoModal__enviar" onClick={() => createPrato()} >Enviar</button>
             </div>
           </form>
         </div>
       </Modal>
       <div className="Header__opcoes Opcoes">
-        <button type='button' className='create__prato' onClick={() => createPrato()}>Adicionar um novo prato</button>
+        
       </div>
     </>
   );
